@@ -6,74 +6,112 @@
 <title>Ayush Raj — Portfolio</title>
 <meta name="description" content="Ayush Raj — Dual Degree CSE (Data Science) at NIT Patna, SDE Intern, ML & NLP enthusiast. Open to SDE Internships Jan–Jun 2027.">
 <style>
-  :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#e6edf3;--muted:#9da7b3;--accent:#58a6ff;--accent2:#bc8cff}
-  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#0b0f14;--card:#12181f;--border:#26313d;--text:#e8eef4;--muted:#9fb0bf;--a1:#58a6ff;--a2:#bc8cff;--green:#3fb950}
+  *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
   body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;line-height:1.65}
-  a{color:var(--accent);text-decoration:none}
-  a:hover{text-decoration:underline}
-  .wrap{max-width:920px;margin:0 auto;padding:0 20px 60px}
-  header{text-align:center;padding:56px 20px 30px}
-  header img{width:150px;height:150px;border-radius:50%;border:3px solid var(--accent);object-fit:cover}
-  header h1{font-size:2.5rem;margin:16px 0 4px}
-  header .role{color:var(--accent2);font-size:1.1rem;font-weight:600}
-  header .sub{color:var(--muted);margin-top:6px}
-  .badge{display:inline-block;margin-top:14px;padding:5px 14px;border:1px solid #238636;color:#3fb950;border-radius:20px;font-size:.9rem;font-weight:600}
-  .links{margin-top:16px}
-  .links a{display:inline-block;margin:4px;padding:8px 18px;border:1px solid var(--border);border-radius:8px;background:var(--card);font-weight:600}
-  section{margin-top:38px}
-  h2{font-size:1.45rem;border-bottom:2px solid var(--border);padding-bottom:8px;margin-bottom:16px}
-  .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin-bottom:16px}
-  .card h3{font-size:1.1rem;margin-bottom:2px}
-  .meta{color:var(--muted);font-size:.92rem;margin-bottom:8px}
-  .tag{display:inline-block;background:#1f6feb22;border:1px solid #1f6feb55;color:var(--accent);border-radius:14px;padding:2px 10px;font-size:.8rem;margin:2px 2px 0 0}
-  .skills{display:flex;flex-wrap:wrap;gap:8px}
-  .skills span{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:6px 12px;font-size:.92rem}
-  ul{margin-left:20px}
-  li{margin-bottom:5px}
+  a{color:var(--a1);text-decoration:none}
+  nav{position:sticky;top:0;z-index:10;background:rgba(11,15,20,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+  nav .in{max-width:980px;margin:0 auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  nav .logo{font-weight:800;font-size:1.15rem;background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  nav .menu a{color:var(--text);margin-left:16px;font-size:.95rem}
+  nav .menu a:hover{color:var(--a1)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px 60px}
+  .hero{display:flex;gap:34px;align-items:center;padding:58px 0 20px;flex-wrap:wrap}
+  .hero img{width:190px;height:190px;border-radius:50%;border:3px solid var(--a1);object-fit:cover;box-shadow:0 0 42px #58a6ff33}
+  .hero .hi{color:var(--a1);font-weight:700;letter-spacing:.4px}
+  .hero h1{font-size:3rem;line-height:1.1;margin:6px 0}
+  .hero h1 span{background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero h2{font-size:1.35rem;color:var(--muted);font-weight:600}
+  .hero p{max-width:560px;color:var(--muted);margin-top:12px}
+  .badge{display:inline-block;margin-top:16px;padding:6px 16px;border:1px solid #238636;color:var(--green);border-radius:20px;font-size:.92rem;font-weight:700}
+  .btns{margin-top:18px}
+  .btns a{display:inline-block;margin-right:10px;padding:10px 20px;border-radius:9px;font-weight:700;border:1px solid var(--border);background:var(--card);color:var(--text)}
+  .btns a.primary{background:#1f6feb;border-color:#1f6feb;color:#fff}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:34px 0 4px}
+  .stat{background:var(--card);border:1px solid var(--border);border-radius:12px;text-align:center;padding:18px 8px}
+  .stat b{font-size:1.5rem;color:var(--a1);display:block}
+  .stat span{color:var(--muted);font-size:.88rem}
+  section{margin-top:46px}
+  h2.t{font-size:1.55rem;margin-bottom:6px}
+  h2.t i{font-style:normal;color:var(--a1)}
+  .sub{color:var(--muted);margin-bottom:18px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin-bottom:16px;transition:transform .15s ease,border-color .15s ease}
+  .card:hover{transform:translateY(-3px);border-color:var(--a1)}
+  .card h3{font-size:1.12rem}
+  .meta{color:var(--muted);font-size:.92rem;margin:2px 0 8px}
+  .tag{display:inline-block;background:#1f6feb1c;border:1px solid #1f6feb55;color:var(--a1);border-radius:14px;padding:2px 10px;font-size:.8rem;margin:3px 3px 0 0}
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  @media(max-width:680px){.grid{grid-template-columns:1fr}header h1{font-size:2rem}}
-  footer{text-align:center;color:var(--muted);margin-top:46px;font-size:.9rem}
-  .hl{color:var(--accent);font-weight:700}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  ul{margin-left:20px} li{margin-bottom:5px}
+  .hl{color:var(--a1);font-weight:700}
+  .pos{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .pos .when{color:var(--a2);font-weight:700;white-space:nowrap}
+  footer{text-align:center;color:var(--muted);margin-top:52px;font-size:.9rem;border-top:1px solid var(--border);padding-top:22px}
+  @media(max-width:760px){.grid,.grid3{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:2.3rem}nav .menu{display:none}}
 </style>
 </head>
 <body>
+<nav><div class="in">
+  <div class="logo">Ayush.dev</div>
+  <div class="menu">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#research">Research</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
+  </div>
+</div></nav>
+
 <div class="wrap">
-  <header>
+  <div class="hero">
     <img src="https://github.com/ayushchain.png" alt="Ayush Raj">
-    <h1>Ayush Raj</h1>
-    <div class="role">Software Development Intern · ML &amp; NLP Enthusiast</div>
-    <div class="sub">B.Tech + M.Tech (Dual Degree), Computer Science &amp; Engineering (Data Science)<br>National Institute of Technology, Patna — Class of 2027 · Patna, India</div>
-    <div><span class="badge">🎯 Open to SDE Internships — Jan–Jun 2027</span></div>
-    <div class="links">
-      <a href="https://github.com/ayushchain" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/ayushchain08" target="_blank">LinkedIn</a>
+    <div>
+      <div class="hi">Hi, my name is</div>
+      <h1><span>Ayush Raj</span></h1>
+      <h2>I build software &amp; study how machines read.</h2>
+      <p>Dual-degree Computer Science (Data Science) student at NIT Patna with strong foundations in data structures, algorithms, web development and AI/ML. Experienced in building full-stack and machine-learning-driven applications. Actively seeking internships and software engineering roles.</p>
+      <div><span class="badge">🎯 Open to SDE Internships — Jan–Jun 2027</span></div>
+      <div class="btns">
+        <a class="primary" href="https://github.com/ayushchain" target="_blank">My GitHub</a>
+        <a href="https://linkedin.com/in/ayushchain08" target="_blank">LinkedIn</a>
+      </div>
     </div>
-  </header>
+  </div>
 
-  <section>
-    <h2>👋 About Me</h2>
+  <div class="stats">
+    <div class="stat"><b>1</b><span>Industry Internship</span></div>
+    <div class="stat"><b>2</b><span>Major Projects</span></div>
+    <div class="stat"><b>4</b><span>Positions of Responsibility</span></div>
+    <div class="stat"><b>86.4%</b><span>FineSurE Balanced Accuracy</span></div>
+  </div>
+
+  <section id="about">
+    <h2 class="t"><i>01.</i> About</h2>
+    <p class="sub">Hello, I'm Ayush — nice to meet you. Please take a look around.</p>
     <div class="card">
-      <p>I am a dual-degree Computer Science student at <b>NIT Patna</b> specialising in <b>Data Science</b>, with hands-on experience as a <b>Software Development Intern at TrailShopy</b>. My interests lie in <b>Machine Learning, Natural Language Processing and AI-text detection</b>, and I enjoy building full-stack web applications with the MERN stack. I am currently strengthening my Data Structures &amp; Algorithms and looking for a software development internship for <b>Jan–Jun 2027</b>.</p>
+      <p>I am a dual-degree Computer Science and Engineering student at <b>NIT Patna</b> with a strong passion for technology and problem-solving. I have hands-on experience in C, Python, Java and JavaScript, with keen interests in software development, data structures &amp; algorithms, and machine learning — especially NLP. I enjoy building real-world projects, participating in hackathons, teaching children through NSS, and continuously learning new technologies.</p>
+    </div>
+    <div class="grid3">
+      <div class="card"><h3>🎓 NIT Patna</h3><div class="meta">B.Tech + M.Tech (Dual Degree)</div><p>Computer Science &amp; Engineering (Data Science)<br>2022 – 2027</p></div>
+      <div class="card"><h3>🏫 Senior Secondary</h3><div class="meta">Bihar School Examination Board</div><p>75.6% · 2020</p></div>
+      <div class="card"><h3>🏫 Secondary</h3><div class="meta">Central Board of Secondary Education</div><p>67.6% · 2018</p></div>
     </div>
   </section>
 
-  <section>
-    <h2>🛠️ Skills</h2>
-    <div class="card">
-      <p style="margin-bottom:8px"><b>Languages</b></p>
-      <div class="skills"><span>C</span><span>Java</span><span>Python</span><span>JavaScript</span></div>
-      <p style="margin:14px 0 8px"><b>Web &amp; Databases</b></p>
-      <div class="skills"><span>HTML</span><span>CSS3</span><span>ReactJS</span><span>NodeJS</span><span>ExpressJS</span><span>MongoDB</span><span>MySQL</span></div>
-      <p style="margin:14px 0 8px"><b>Coursework &amp; Tools</b></p>
-      <div class="skills"><span>Data Structures</span><span>Algorithms</span><span>Machine Learning</span><span>NLP</span><span>Operating Systems</span><span>DBMS</span><span>OOP</span><span>LaTeX</span><span>Figma</span><span>Git</span></div>
+  <section id="skills">
+    <h2 class="t"><i>02.</i> Skills</h2>
+    <p class="sub">These are the technologies and tools I've worked with</p>
+    <div class="grid">
+      <div class="card"><h3>Programming Languages</h3><div><span class="tag">C</span><span class="tag">Java</span><span class="tag">Python</span><span class="tag">JavaScript</span></div></div>
+      <div class="card"><h3>Web Development</h3><div><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">ReactJS</span><span class="tag">NodeJS</span><span class="tag">ExpressJS</span><span class="tag">MERN Stack</span></div></div>
+      <div class="card"><h3>Databases</h3><div><span class="tag">MySQL</span><span class="tag">MongoDB</span></div></div>
+      <div class="card"><h3>Core CS Subjects</h3><div><span class="tag">Data Structures &amp; Algorithms</span><span class="tag">OS</span><span class="tag">DBMS</span><span class="tag">Computer Networks</span><span class="tag">OOP</span><span class="tag">AI / ML</span><span class="tag">NLP</span></div></div>
+      <div class="card"><h3>Tools &amp; Platforms</h3><div><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">LaTeX</span><span class="tag">Figma</span></div></div>
+      <div class="card"><h3>Soft Skills</h3><div><span class="tag">Team Player</span><span class="tag">Communication</span><span class="tag">Time Management</span><span class="tag">Mentoring</span></div></div>
     </div>
   </section>
 
-  <section>
-    <h2>💼 Experience</h2>
+  <section id="experience">
+    <h2 class="t"><i>03.</i> Experience</h2>
     <div class="card">
-      <h3>Software Development Intern — TrailShopy</h3>
-      <div class="meta">Remote · May 2025 – Jul 2025</div>
+      <div class="pos"><h3>Software Development Intern — TrailShopy</h3><span class="when">May 2025 – Jul 2025</span></div>
+      <div class="meta">Remote</div>
       <ul>
         <li>Built responsive UI components, improved cross-device compatibility, and optimized website page-load performance.</li>
         <li>Collaborated on backend services and RESTful APIs; tested and debugged features to improve application stability.</li>
@@ -81,66 +119,63 @@
     </div>
   </section>
 
-  <section>
-    <h2>🚀 Projects</h2>
+  <section id="projects">
+    <h2 class="t"><i>04.</i> Projects</h2>
+    <p class="sub">Check out some of my recent work</p>
     <div class="grid">
-      <div class="card">
-        <h3>FineSurE — Fine-Grained Text Summarization Evaluation</h3>
-        <div class="meta">Nov 2025</div>
+      <div class="card"><h3>FineSurE — Fine-Grained Text Summarization Evaluation</h3><div class="meta">Nov 2025</div>
         <p>Used LLMs to evaluate summary quality across faithfulness, completeness and conciseness, at sentence and summary level. Achieved <span class="hl">86.4% balanced accuracy</span> in sentence-level faithfulness evaluation, benchmarked across multiple LLMs against human judgments.</p>
-        <div><span class="tag">Python</span><span class="tag">NLP</span><span class="tag">LLMs</span></div>
-      </div>
-      <div class="card">
-        <h3>SmartBazaar — Supermarket Automation System</h3>
-        <div class="meta">Dec 2024</div>
-        <p>A web-based supermarket automation system for billing, invoicing, inventory management and sales reporting, designed with full software-engineering artifacts (SRS, DFDs, Use Cases, Class Diagrams).</p>
-        <div><span class="tag">ReactJS</span><span class="tag">NodeJS</span><span class="tag">ExpressJS</span><span class="tag">MongoDB</span></div>
-      </div>
+        <div><span class="tag">Python</span><span class="tag">NLP</span><span class="tag">LLMs</span></div></div>
+      <div class="card"><h3>SmartBazaar — Supermarket Automation System</h3><div class="meta">Dec 2024</div>
+        <p>A web-based supermarket automation system for billing, invoicing, inventory management and sales reporting, designed with full software-engineering artifacts (SRS, DFDs, Use Cases, Class Diagrams) for a scalable, maintainable architecture.</p>
+        <div><span class="tag">ReactJS</span><span class="tag">NodeJS</span><span class="tag">ExpressJS</span><span class="tag">MongoDB</span></div></div>
     </div>
   </section>
 
-  <section>
-    <h2>📚 Research</h2>
+  <section id="research">
+    <h2 class="t"><i>05.</i> Research</h2>
     <div class="card">
-      <p>My research studies how <b>OCR and vision-language model (VLM) readers</b> change <b>AI-text detection</b> across English, Hindi and Romanized Hindi — auditing and calibrating detectors on transcribed handwritten student work.</p>
+      <p><b>Read or Rewrite?</b> — My research studies how <b>OCR and vision-language model (VLM) readers</b> change <b>AI-text detection</b> across English, Hindi and Romanized Hindi, auditing and calibrating detectors on transcribed handwritten student work. Manuscript under review (ARR, October 2026 cycle).</p>
     </div>
   </section>
 
   <section>
-    <h2>🏆 Achievements</h2>
-    <div class="card">
-      <ul>
-        <li><b>UGC-NET (Computer Science &amp; Applications), June 2026</b> — Qualified for Ph.D. admission</li>
-        <li>Cleared <b>NTSE Stage-I</b> (2018) · Qualified <b>JEE Main</b> (2022)</li>
-        <li>Scholar Badge recipient (multiple times); Class Representative; district-level competition winner</li>
-        <li>Hackathons: <b>ByteVerse</b> (Sep 2023) and <b>UI/UX Hackathon</b> (Oct 2024) — HackSlash, NIT Patna</li>
-      </ul>
+    <h2 class="t"><i>06.</i> Positions of Responsibility</h2>
+    <div class="grid">
+      <div class="card"><div class="pos"><h3>Mentor &amp; Teacher</h3><span class="when">Jan 2023 – Present</span></div><div class="meta">Sankalp (NSS), NIT Patna</div><p>Mentoring students and teaching underprivileged children.</p></div>
+      <div class="card"><div class="pos"><h3>Volunteer</h3><span class="when">Dec 2022 – Present</span></div><div class="meta">National Service Scheme (NSS), NIT Patna</div><p>Active volunteer participating in social service initiatives.</p></div>
+      <div class="card"><div class="pos"><h3>Member</h3><span class="when">Sep 2023 – Present</span></div><div class="meta">Think India, NIT Patna</div><p>Part of the student community chapter at NIT Patna.</p></div>
+      <div class="card"><div class="pos"><h3>Member, PR &amp; Sponsorship Team</h3><span class="when">Jan 2023 – Present</span></div><div class="meta">NIT Patna</div><p>Public relations and sponsorship outreach for institute events.</p></div>
     </div>
   </section>
 
-  <section>
-    <h2>🤝 Leadership &amp; Volunteering</h2>
-    <div class="card">
-      <ul>
-        <li><b>Mentor &amp; Teacher</b> — Sankalp (NSS), NIT Patna: teaching and mentoring underprivileged children</li>
-        <li><b>Volunteer</b> — National Service Scheme (NSS), NIT Patna</li>
-        <li><b>Member</b> — Think India, NIT Patna · PR &amp; Sponsorship Team, NIT Patna</li>
-      </ul>
-    </div>
+  <section id="achievements">
+    <h2 class="t"><i>07.</i> Achievements</h2>
+    <div class="card"><ul>
+      <li><b>UGC-NET (Computer Science &amp; Applications), June 2026</b> — Qualified for Ph.D. admission</li>
+      <li>Cleared <b>NTSE Stage-I</b> (2018) · Qualified <b>JEE Main</b> (2022)</li>
+      <li>Scholar Badge recipient (multiple times) and Class Representative in school</li>
+      <li>Winner of multiple academic and co-curricular competitions at the district level</li>
+    </ul></div>
+    <h2 class="t" style="margin-top:28px"><i>08.</i> Certifications</h2>
+    <div class="card"><ul>
+      <li><b>ByteVerse Hackathon</b> — Participation Certificate, HackSlash (Sep 2023)</li>
+      <li><b>UI/UX Hackathon</b> — Participation Certificate, HackSlash (Oct 2024)</li>
+    </ul></div>
   </section>
 
-  <section>
-    <h2>📫 Contact</h2>
+  <section id="contact">
+    <h2 class="t"><i>09.</i> Contact</h2>
     <div class="card" style="text-align:center">
       <p>I am actively looking for a <b>Software Development Internship (Jan–Jun 2027)</b>. The fastest way to reach me:</p>
-      <div class="links">
-        <a href="https://linkedin.com/in/ayushchain08" target="_blank">Connect on LinkedIn</a>
+      <div class="btns" style="justify-content:center;display:flex">
+        <a class="primary" href="https://linkedin.com/in/ayushchain08" target="_blank">Connect on LinkedIn</a>
         <a href="https://github.com/ayushchain" target="_blank">See my GitHub</a>
       </div>
     </div>
   </section>
 
-  <footer>© 2026 Ayush Raj · NIT Patna · Built with pride, powered by chai ☕</footer>
+  <footer>© 2026 Ayush Raj · NIT Patna · All rights reserved.</footer>
 </div>
 </body>
 </html>
